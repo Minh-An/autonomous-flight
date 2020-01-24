@@ -40,6 +40,7 @@ def test_exercise_1_1(drone_class):
 
 	for om, om_sol in zip(student.omega, solution.omega):
 		if not close_enough(om, om_sol):
+			print(solution.omega)
 			print("Error in exercise 1.1")
 			return
 	print("Tests pass - exercise 1.1")
@@ -59,6 +60,8 @@ def test_exercise_1_2(drone_class):
 	for r1, r2 in zip(r_stu, r_sol):
 		for v1, v2 in zip(r1, r2):
 			if not close_enough(v1,v2):
+				print(v1)
+				print(v2)
 				print("Error in exercise 1.2")
 				return
 	print("Tests pass - exercise 1.2")
