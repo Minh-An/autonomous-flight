@@ -42,7 +42,7 @@ class DronewithPID(CoaxialCopter,PIDController_with_ff):
         # declaring the initial state of the drone with zero hight and zero velocity 
         Controlled_Drone.X = np.array([0.0,0.0,0.0,0.0])
         
-        Drone_Sensor = self.Sensor(Controlled_Drone.X, 0.95)
+        Drone_Sensor = self.Sensor(Controlled_Drone.X[0], 0.95)
         observation_history = Controlled_Drone.X[0]
 
         # executing the flight
